@@ -58,7 +58,6 @@ $row = mysqli_fetch_assoc($result);
             background: white;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             overflow: hidden;
-            border-radius: 10px;
             animation: slideUp 0.5s ease-out;
         }
 
@@ -133,7 +132,6 @@ $row = mysqli_fetch_assoc($result);
             width: 100%;
             padding: 12px;
             border: 1px solid #ddd;
-            border-radius: 4px;
             font-size: 16px;
             font-family: Arial, sans-serif;
         }
@@ -185,7 +183,6 @@ $row = mysqli_fetch_assoc($result);
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            border-radius: 4px;
             text-decoration: none;
             text-align: center;
             transition: all 0.3s ease;
