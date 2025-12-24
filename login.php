@@ -125,13 +125,13 @@ if (isset($_SESSION['username'])) {
                         header("location:tampilDataMhs.php");
                         exit;
                     } else {
-                        echo "<div class='error-message'>❌ Password salah!</div>";
+                        echo "<div class='error-message'>Password salah!</div>";
                     }
                 } else {
-                    echo "<div class='error-message'>❌ Password belum diatur untuk user ini!</div>";
+                    echo "<div class='error-message'>Password belum diatur untuk user ini!</div>";
                 }
             } else {
-                echo "<div class='error-message'>❌ NIM tidak ditemukan!</div>";
+                echo "<div class='error-message'>NIM tidak ditemukan!</div>";
             }
         }
         ?>

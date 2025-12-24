@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+// Validasi session - jika belum login, redirect ke login.php
+if (!isset($_SESSION['username'])) {
+    header("location:login.php");
+    exit;
+}
+
 require_once 'connection.php';
 
 // Ambil semua data mahasiswa
@@ -128,9 +136,35 @@ $result = mysqli_query($conn, $sql);
             gap: 10px;
             margin-top: 20px;
         }
+
+        .logout-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            background: #e74c3c;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: background 0.3s;
+        }
+
+        .logout-btn:hover {
+            background: #c0392b;
+        }
     </style>
 </head>
 <body>
+
+<?php
+if (isset($_GET['logout'])) {
+    session_start();
+    session_destroy();
+    header("location:login.php");
+    exit;
+}
+?>
 
 <div class="container">
     <h2>Daftar Data Mahasiswa</h2>
@@ -187,6 +221,8 @@ $result = mysqli_query($conn, $sql);
         <a href="cetakDataMhs.php" class="btn-cetak">Cetak PDF</a>
     </div>
 </div>
+
+<a href="?logout=true" class="logout-btn">Logout</a>
 
 </body>
 </html>

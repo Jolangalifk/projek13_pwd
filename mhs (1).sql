@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 19, 2025 at 03:31 PM
+-- Generation Time: Dec 24, 2025 at 09:34 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -40,15 +40,17 @@ CREATE TABLE `mhs` (
   `jk` varchar(50) DEFAULT NULL,
   `status` varchar(50) DEFAULT NULL,
   `hobi` varchar(500) DEFAULT NULL,
-  `email` varchar(100) NOT NULL
+  `email` varchar(100) NOT NULL,
+  `pass` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `mhs`
 --
 
-INSERT INTO `mhs` (`id`, `nim`, `nama`, `no_hp`, `umur`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `kota`, `jk`, `status`, `hobi`, `email`) VALUES
-(1, 'A12.2024.07239', 'Jolang Alif Khan', '0882006787460', 22, 'Pati', '1997-07-10', 'Ds. Kudur, RT.04/RW.03, Kec. Winong, Kab. Pati. Jawa Tengah.', 'Jakarta', 'Laki-laki', 'Belum Kawin', 'Olahraga, Musik', 'jolangalif@gmail.com');
+INSERT INTO `mhs` (`id`, `nim`, `nama`, `no_hp`, `umur`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `kota`, `jk`, `status`, `hobi`, `email`, `pass`) VALUES
+(1, 'A12.2024.07239', 'Jolang Alif Khan', '0882006787460', 22, 'Pati', '1997-07-10', 'Ds. Kudur, RT.04/RW.03, Kec. Winong, Kab. Pati. Jawa Tengah.', 'Jakarta', 'Laki-laki', '', 'Olahraga', 'jolangalif@gmail.com', '$2y$10$95VbKTpW9ocMnJVOVq0RwOLnDu5sou8yUakPfkWkW/l2em3xLiZKy'),
+(2, 'A12.2020.05233', 'Pedri Jono', '081222854209', 21, 'Kudus', '2025-12-10', 'Kec. Barcelona, Ds. Spanyol, RT 02/ RW 10, Jawa Tengah.', 'Semarang', 'Laki-laki', '', 'Olahraga, Gaming', 'pedrijono@gmail.com', '');
 
 --
 -- Indexes for dumped tables
@@ -70,7 +72,7 @@ ALTER TABLE `mhs`
 -- AUTO_INCREMENT for table `mhs`
 --
 ALTER TABLE `mhs`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
